@@ -1,0 +1,85 @@
+/* =========================
+   Hero
+========================= */
+
+.hero {
+  min-height: calc(100vh - 72px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  max-width: 1180px;
+  margin: 0 auto;
+
+  padding: 80px 60px 120px;
+}
+
+.hero > p:first-child {
+  margin-bottom: 22px;
+
+  color: #2457d6;
+
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.hero h1 {
+  max-width: 900px;
+
+  font-size: clamp(52px, 6vw, 82px);
+  line-height: 1.15;
+
+  letter-spacing: -0.055em;
+
+  color: #111827;
+}
+
+.hero h1 + p {
+  max-width: 760px;
+
+  margin-top: 32px;
+
+  font-size: 18px;
+  line-height: 1.9;
+
+  color: #657085;
+}
+
+.hero > p:last-child {
+  margin-top: 28px;
+
+  font-size: 14px;
+  line-height: 1.8;
+
+  color: #465168;
+}
+
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 850px) {
+
+  .navbar {
+    padding: 0 24px;
+  }
+
+  .navbar-menu {
+    display: none;
+  }
+
+  .hero {
+    padding: 70px 28px 100px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .hero h1 + p {
+    font-size: 16px;
+  }
+}
