@@ -1,3 +1,4 @@
+import Guestbook from './components/Guestbook'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import SelfPR from './components/SelfPR'
@@ -10,6 +11,7 @@ function App() {
       <Hero />
       <SelfPR />
       <Gakuchika />
+      <Guestbook />
     </>
   )
 }

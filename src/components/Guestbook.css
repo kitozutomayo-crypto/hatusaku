@@ -1,0 +1,70 @@
+.guestbook {
+  padding: 120px 0;
+  background: #ffffff;
+}
+
+.guestbook-container {
+  width: min(900px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.guestbook-label {
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.guestbook h2 {
+  font-size: clamp(36px, 5vw, 56px);
+  margin-bottom: 40px;
+}
+
+.guestbook-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 50px;
+}
+
+.guestbook-form input,
+.guestbook-form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #d8d8d8;
+  border-radius: 8px;
+  font: inherit;
+}
+
+.guestbook-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.guestbook-form button {
+  width: fit-content;
+  padding: 12px 24px;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.guestbook-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.guestbook-item {
+  padding: 22px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.guestbook-item p {
+  margin: 8px 0;
+  line-height: 1.7;
+}
+
+.guestbook-item time {
+  font-size: 13px;
+  color: #777;
+}
