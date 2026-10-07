@@ -33,7 +33,8 @@ function SelfPR() {
               <div className="rubik-title">
                 <span className="cube-icon">◆</span>
                 <div>
-                  <strong>RUBIK&apos;S CUBE</strong>
+                  <strong>ルービックキューブ
+                  </strong>
                   <p>
                     高校時代、サークルの代表として大会に出場。
                     自分の動きを分析し、練習方法を改善しました。

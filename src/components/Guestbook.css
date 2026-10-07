@@ -68,3 +68,72 @@
   font-size: 13px;
   color: #777;
 }
+/* ===== Error State ===== */
+
+.guestbook-error {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+
+  margin: 28px 0;
+  padding: 22px 24px;
+
+  border: 1px solid #e2def8;
+  border-radius: 16px;
+
+  background: #faf9ff;
+}
+
+.guestbook-error-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  width: 30px;
+  height: 30px;
+
+  border-radius: 50%;
+
+  background: #7545f5;
+  color: white;
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.guestbook-error strong {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #171a32;
+  font-size: 15px;
+}
+
+.guestbook-error p {
+  margin: 0 0 12px;
+
+  color: #777d93;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.guestbook-error button {
+  padding: 0;
+
+  border: none;
+  background: transparent;
+
+  color: #7545f5;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.guestbook-error button:hover {
+  text-decoration: underline;
+}

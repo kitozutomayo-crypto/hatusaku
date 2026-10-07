@@ -7,20 +7,24 @@ function Guestbook() {
   const [message, setMessage] = useState('')
   const [messages, setMessages] = useState([])
   const [loading, setLoading] = useState(false)
+  const [error, setError] = useState(null)
 
-  const loadMessages = async () => {
-    const { data, error } = await supabase
-      .from('messages')
-      .select('*')
-      .order('created_at', { ascending: false })
+const loadMessages = async () => {
+  setError(null)
 
-    if (error) {
-      console.error(error)
-      return
-    }
+  const { data, error: supabaseError } = await supabase
+    .from('messages')
+    .select('*')
+    .order('created_at', { ascending: false })
 
-    setMessages(data)
+  if (supabaseError) {
+    console.error(supabaseError)
+    setError('留言を読み込めませんでした。しばらくしてから、もう一度お試しください。')
+    return
   }
+
+  setMessages(data || [])
+}
 
   const submitMessage = async (e) => {
     e.preventDefault()
@@ -54,31 +58,45 @@ function Guestbook() {
   return (
     <section className="guestbook" id="guestbook">
       <div className="guestbook-container">
-        <p className="guestbook-label">GUESTBOOK</p>
-        <h2>Leave a message.</h2>
+        <p className="guestbook-label">GUESTBOOK・ゲストブック</p>
+        <h2>leave a message！・よかったら、気軽にメッセージを残してください！</h2>
 
         <form className="guestbook-form" onSubmit={submitMessage}>
           <input
             type="text"
-            placeholder="Your name"
+            placeholder="Your name・お名前"
             value={name}
             onChange={(e) => setName(e.target.value)}
             maxLength={40}
           />
 
           <textarea
-            placeholder="Your message"
+            placeholder="Your message・メッセージ"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             maxLength={300}
           />
 
           <button type="submit" disabled={loading}>
-            {loading ? 'Sending...' : 'Send message'}
+            {loading ? 'Sending...' : 'Send message・送信'}
           </button>
         </form>
 
         <div className="guestbook-list">
+         {error && (
+  <div className="guestbook-error">
+    <span className="guestbook-error-icon">!</span>
+
+    <div>
+      <strong>Guestbook is temporarily unavailable.</strong>
+      <p>{error}</p>
+
+      <button type="button" onClick={loadMessages}>
+        もう一度読み込む
+      </button>
+    </div>
+  </div>
+)}
           {messages.map((item) => (
             <article className="guestbook-item" key={item.id}>
               <strong>{item.name}</strong>
