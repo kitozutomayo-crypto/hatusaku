@@ -17,8 +17,9 @@ function App() {
   <SelfPR />
   <InteractiveSimulator />
   <ReliabilityProject />
-  <Story />
   <Personal />  
+  <Story />
+  
   <Guestbook />
 </>
     </>
