@@ -40,7 +40,7 @@
 }
 
 .personal-header {
-  margin-bottom: 34px;
+  margin-bottom: 10px;
 }
 
 .personal-header h2 {
@@ -149,8 +149,8 @@
 ========================= */
 
 .personal-more {
-  padding-top: 48px;
-  padding-bottom: 60px;
+  padding-top: 10px;
+  padding-bottom: 30px;
 }
 
 .more-heading {

@@ -13,19 +13,12 @@ function App() {
     <>
       <>
   <Navbar />
-
   <Hero />
-
   <SelfPR />
-
   <InteractiveSimulator />
-  <Story />
-  <Personal />
-
-
-  
   <ReliabilityProject />
-
+  <Story />
+  <Personal />  
   <Guestbook />
 </>
     </>

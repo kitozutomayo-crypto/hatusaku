@@ -17,8 +17,8 @@ function Personal() {
       <div className="personal-page personal-main">
 
         <header className="personal-header">
-          <h2>好きなもの、好きな時間。</h2>
-          <p>ここからは、少しだけ普段の自分を。</p>
+          <h2>好きなもの、好きな時間</h2>
+          <p>ここからは、少しだけ普段の自分を</p>
         </header>
 
         <div className="main-scrapbook">
@@ -96,8 +96,7 @@ function Personal() {
 <div className="personal-page personal-more">
 
   <div className="more-heading">
-    <span>AND MORE...</span>
-    <h2>日常でささいなこと。</h2>
+    <h2>日常でささいなこと</h2>
   </div>
 
   <div className="more-grid">

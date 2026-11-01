@@ -1,5 +1,5 @@
 import "./Hero.css";
-import profileImage from "../assets/profile.jpeg";
+import profileImage from "../assets/personal/IMG_9875.jpeg";
 
 function Hero() {
   return (
@@ -26,18 +26,16 @@ function Hero() {
 
         {/* Education */}
         <div className="hero-education">
-          <p className="hero-university">中南林業科技大学</p>
+          <p className="hero-university">Central South University of Foresety and Technology
+          </p>
 
-          <p className="hero-university">法政大学大学院</p>
+          <p className="hero-university">法政大学</p>
           <p className="hero-department">
             理工学研究科・経営システム工学専攻
           </p>
         </div>
 
-        {/* Japan */}
-        <p className="hero-japan">
-          2024.10　来日
-        </p>
+       
 
         {/* Interests */}
         <div className="hero-interests">

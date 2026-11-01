@@ -1,55 +1,235 @@
 .story {
-  background: #f8f9fc;
+  padding: 30px 24px 60px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f8f9fc 0%,
+      #f7f8fb 100%
+    );
+
+  overflow: hidden;
 }
 
-.story-container {
-  width: min(1180px, 100%);
+.story-notes {
+  position: relative;
+
+  width: min(100%, 1500px);
+  height: 700px;
+
   margin: 0 auto;
-
-  padding: 90px 24px 30px;
 }
 
-.story-heading {
-  max-width: 700px;
+
+/* =========================
+   TITLE
+========================= */
+
+.story-title {
+  position: absolute;
+
+  top: 52px;
+  left: 2%;
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  width: auto;
+
+  z-index: 4;
 }
 
-.story-label {
-  margin: 0 0 14px;
+.story-title::before {
+  content: "";
 
-  font-size: 12px;
-  font-weight: 700;
+  width: 42px;
+  height: 1px;
 
-  letter-spacing: 0.18em;
-
-  color: #7546f5;
+  background: rgba(23, 20, 47, 0.28);
 }
 
-.story-heading h2 {
+.story-title h2 {
   margin: 0;
 
-  font-size: 38px;
+  font-size: clamp(1.15rem, 1.5vw, 1.45rem);
+  line-height: 1.4;
 
-  color: var(--text-primary);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+
+  color: #3f3b52;
 }
 
-.story-description {
-  margin: 16px 0 0;
 
-  font-size: 14px;
-  line-height: 1.8;
+/* =========================
+   COMMON
+========================= */
 
-  color: #707486;
+.story-note {
+  position: absolute;
+
+  padding: 44px 48px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #fffefa 0%,
+      #fffdf9 100%
+    );
+
+  border: 1px solid rgba(23, 20, 47, 0.07);
+  border-radius: 3px;
+
+  box-shadow:
+    0 18px 45px rgba(30, 25, 55, 0.07),
+    0 3px 10px rgba(30, 25, 55, 0.025);
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
-@media (max-width: 700px) {
-  .story-container {
-    padding:
-      70px
-      18px
-      24px;
+
+/* subtle vertical line */
+
+.story-note::before {
+  content: "";
+
+  position: absolute;
+
+  top: 28px;
+  bottom: 28px;
+  left: 24px;
+
+  width: 1px;
+
+  background: rgba(139, 25, 255, 0.10);
+}
+
+
+/* number */
+
+.story-note::after {
+  position: absolute;
+
+  right: 22px;
+  bottom: 18px;
+
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+
+  color: rgba(23, 20, 47, 0.20);
+}
+
+
+/* =========================
+   TEXT
+========================= */
+
+.story-note p {
+  margin: 0 0 20px;
+
+  padding-left: 8px;
+
+  font-size: 1rem;
+  line-height: 2;
+  letter-spacing: 0.015em;
+
+  color: #56586a;
+}
+
+.story-note p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================
+   JAPANESE — TOP RIGHT
+========================= */
+
+.note-japanese {
+  width: 47%;
+
+  top: 40px;
+  right: 2%;
+
+  min-height: 350px;
+
+  transform: rotate(0.2deg);
+}
+
+.note-japanese::after {
+  content: "01";
+}
+
+
+/* =========================
+   CHINESE — MIDDLE LEFT
+========================= */
+
+.note-chinese {
+  width: 50%;
+
+  top: 200px;
+  left: 2%;
+
+  min-height: 380px;
+
+  transform: rotate(-0.2deg);
+}
+
+.note-chinese::after {
+  content: "02";
+}
+
+
+/* =========================
+   ENGLISH — BOTTOM RIGHT
+========================= */
+
+.note-english {
+  width: 58%;
+
+  top: 500px;
+  right: 4%;
+
+  min-height: 170px;
+
+  transform: rotate(0.15deg);
+}
+
+.note-english::after {
+  content: "03";
+}
+
+
+/* =========================
+   HOVER
+========================= */
+
+@media (hover: hover) and (pointer: fine) {
+
+  .story-note:hover {
+    box-shadow:
+      0 24px 55px rgba(30, 25, 55, 0.10),
+      0 5px 14px rgba(30, 25, 55, 0.035);
   }
 
-  .story-heading h2 {
-    font-size: 30px;
+  .note-japanese:hover {
+    transform: rotate(0.2deg) translateY(-4px);
+  }
+
+  .note-chinese:hover {
+    transform: rotate(-0.2deg) translateY(-4px);
+  }
+
+  .note-english:hover {
+    transform: rotate(0.15deg) translateY(-4px);
   }
 }

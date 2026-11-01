@@ -48,10 +48,10 @@
   height: 100%;
 
   object-fit: cover;
-  object-position: center 42%;
+  object-position: center 20%;
 
   /* 稍微放大，并向左移动，调整人脸视觉中心 */
-  transform: scale(1.07) translateX(-3px);
+  transform: scale(1.0) translateX(-3px);
 
   border-radius: 50%;
   display: block;
@@ -77,7 +77,7 @@
 
   letter-spacing: 0.12em;
 
-  color: #687086;
+  color: #353841;
 }
 
 .hero-name-sub span {
@@ -121,24 +121,8 @@
 
   font-size: 15px;
 
-  color: #697187;
+  color: #343842;
 }
-
-
-/* =========================
-   Japan
-========================= */
-
-.hero-japan {
-  margin: 15px 0 0;
-
-  font-size: 15px;
-
-  color: #555f76;
-
-  letter-spacing: 0.04em;
-}
-
 
 /* =========================
    Interests

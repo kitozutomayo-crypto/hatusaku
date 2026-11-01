@@ -10,7 +10,7 @@ function Navbar() {
       <ul className="navbar-menu">
         <li><a href="#home">Home</a></li>
         <li><a href="#self-pr">自己PR</a></li>
-        <li><a href="#gakuchika">ガクチカ</a></li>
+        <li><a href="#gakuchika">Project</a></li>
         <li><a href="#guestbook">Guestbook</a></li>
       </ul>
     </nav>
