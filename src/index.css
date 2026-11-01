@@ -1,4 +1,8 @@
 :root {
+  --text-primary: #17182a;
+  --text-secondary: #707486;
+  --text-muted: #9a9dac;
+
   font-family: "Noto Sans JP", "Helvetica Neue", Arial, sans-serif;
   color: #182033;
   background: #f8fafc;

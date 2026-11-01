@@ -2,16 +2,32 @@ import Guestbook from './components/Guestbook'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import SelfPR from './components/SelfPR'
-import Gakuchika from './components/Gakuchika'
+import Personal from "./components/Personal";
+import InteractiveSimulator from "./components/reliability/InteractiveSimulator";
+import ReliabilityProject from "./components/reliability/ReliabilityProject";
+
+import Story from "./components/Story";
 
 function App() {
   return (
     <>
-      <Navbar />
-      <Hero />
-      <SelfPR />
-      <Gakuchika />
-      <Guestbook />
+      <>
+  <Navbar />
+
+  <Hero />
+
+  <SelfPR />
+
+  <InteractiveSimulator />
+  <Story />
+  <Personal />
+
+
+  
+  <ReliabilityProject />
+
+  <Guestbook />
+</>
     </>
   )
 }

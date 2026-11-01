@@ -1,0 +1,108 @@
+/* =========================================
+   RESULT FIGURES
+========================================= */
+
+.result-figures-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 22px;
+}
+
+
+.result-figure-card {
+  overflow: hidden;
+
+  background: white;
+
+  border: 1px solid #e1e3eb;
+  border-radius: 20px;
+
+  box-shadow:
+    0 4px 18px rgba(20, 24, 45, 0.035);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.result-figure-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 12px 30px rgba(20, 24, 45, 0.07);
+}
+
+
+.result-figure-text {
+  padding: 26px 26px 18px;
+}
+
+
+.result-figure-number {
+  display: block;
+
+  margin-bottom: 18px;
+
+  font-size: 11px;
+
+  color: var(--text-muted);
+}
+
+
+.result-figure-text h4 {
+  margin: 0;
+
+  font-size: 20px;
+
+  color: var(--text-primary);
+}
+
+
+.result-figure-en {
+  margin: 6px 0 0;
+
+  font-size: 12px;
+
+  color: var(--text-secondary);
+}
+
+
+.result-figure-description {
+  margin: 18px 0 0;
+
+  font-size: 14px;
+  line-height: 1.8;
+
+  color: #55596b;
+}
+
+
+.result-figure-image {
+  padding: 12px 18px 22px;
+}
+
+
+.result-figure-image img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  border-radius: 12px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .result-figures-grid {
+    grid-template-columns: 1fr;
+  }
+
+}

@@ -1,0 +1,55 @@
+.story {
+  background: #f8f9fc;
+}
+
+.story-container {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+
+  padding: 90px 24px 30px;
+}
+
+.story-heading {
+  max-width: 700px;
+}
+
+.story-label {
+  margin: 0 0 14px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+
+  color: #7546f5;
+}
+
+.story-heading h2 {
+  margin: 0;
+
+  font-size: 38px;
+
+  color: var(--text-primary);
+}
+
+.story-description {
+  margin: 16px 0 0;
+
+  font-size: 14px;
+  line-height: 1.8;
+
+  color: #707486;
+}
+
+@media (max-width: 700px) {
+  .story-container {
+    padding:
+      70px
+      18px
+      24px;
+  }
+
+  .story-heading h2 {
+    font-size: 30px;
+  }
+}
